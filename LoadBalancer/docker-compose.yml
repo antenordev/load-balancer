@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+
+  master: 
+    container_name: master
+    build:
+      context: ./master
+      dockerfile: nginx.dockerfile
+    ports: # exteral:internal
+      - "80:80"
+
+  node1: 
+    container_name: node1
+    build:
+      context: ./node1
+      dockerfile: nginx.dockerfile
+    ports: # exteral:internal
+      - "80"
+
+  node2: 
+    container_name: node2
+    build:
+      context: ./node2
+      dockerfile: nginx.dockerfile
+    ports: # exteral:internal
+      - "80"

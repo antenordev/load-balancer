@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+
+  proxy:
+    container_name: proxy
+    build:
+      context: .
+      dockerfile: nginx.dockerfile
+    ports: # exteral:internal
+      - "8000:8000"
