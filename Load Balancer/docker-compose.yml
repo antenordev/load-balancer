@@ -2,7 +2,7 @@ version: '3'
 
 services:
 
-  master: 
+  master:
     container_name: master
     build:
       context: ./master
@@ -10,7 +10,7 @@ services:
     ports: # exteral:internal
       - "80:80"
 
-  node1: 
+  node1:
     container_name: node1
     build:
       context: ./node1
@@ -18,7 +18,7 @@ services:
     ports: # exteral:internal
       - "80"
 
-  node2: 
+  node2:
     container_name: node2
     build:
       context: ./node2

@@ -1,0 +1,36 @@
+version: '3'
+services:
+  host:
+    container_name: host
+    build:
+      context: .
+      dockerfile: nginx.dockerfile
+    ports:
+      # external:internal
+      - "80:80"
+      - "443:443"
+      #environment:
+      #- VIRTUAL_HOST=host.com
+      #- LETSENCRYPT_HOST=host.com
+    networks:
+      - host
+      #letsencrypt:
+      #container_name: cert-ssl
+      #volumes:
+      #- certs:/etc/nginx/certs:ro
+      #- confd:/etc/nginx/conf.d
+      #- vhostd:/etc/nginx/vhost.d
+      #- html:/usr/share/nginx/html
+
+      #volumes:
+      #certs:
+      #confd:
+      #vhostd:
+      #html:
+networks:
+  host:
+    driver: bridge
+    #frontend:
+    #driver: bridge
+    #backend:
+    #driver: bridge

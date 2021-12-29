@@ -1,13 +1,19 @@
-# Configuration NGINX
+# Guide
+
+## Host
+
+```
+
+```
 
 ## Load Balancer
 
 ```
-cmd
+
 ```
 
 ## Proxy
 
 ```
-cmd
+
 ```
